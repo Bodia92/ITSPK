@@ -6,7 +6,7 @@
 	<meta charset="UTF-8">
 	<meta name="format-detection" content="telephone=no">
 	<!-- <style>body{opacity: 0;}</style> -->
-	<link rel="stylesheet" href="css/style.min.css?_v=20220106103738">
+	<link rel="stylesheet" href="css/style.min.css?_v=20220223183621">
 	<link rel="shortcut icon" href="favicon.ico">
 	<!-- <meta name="robots" content="noindex, nofollow"> -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -26,9 +26,9 @@
 				<div class="header__menu menu">
 					<nav class="menu__body">
 						<ul class="menu__list">
-							<li class="menu__item"><a href="" class="menu__link">О нас</a></li>
-							<li class="menu__item"><a href="" class="menu__link">Услуги</a></li>
-							<li class="menu__item"><a href="" class="menu__link">Цены</a></li>
+							<li data-goto="#about" class="menu__item"><a href="" class="menu__link">О нас</a></li>
+							<li data-goto="#services" class="menu__item"><a href="" class="menu__link">Услуги</a></li>
+							<li data-goto="#price" class="menu__item"><a href="" class="menu__link">Цены</a></li>
 						</ul>
 					</nav>
 				</div>
@@ -87,20 +87,20 @@
 							<h1 class="body-main__title">IT-Аутсорсинг компаниям в Киеве</h1>
 							<div class="body-main__text">Обслуживание компьютеров в Киеве</div>
 							<div class="body-main__price">От <span>315грн</span>/мес за 1 рабочее место</div>
-							<button type="button" class="body-main__buttom buttom _icon-arrow">Отправить заявку</button>
+							<button data-popup="#popup" type="button" class="body-main__buttom buttom _icon-arrow">Отправить заявку</button>
 						</div>
 						<div class="main__text">Мы знаем как сложно найти хорошую компанию по обслуживанию компьютеров в Киеве. Исправим это!</div>
 					</section>
 
 				</div>
 			</div>
-			<section class="about-us">
+			<section id="about" class="about-us">
 				<div class="about-us__container">
 					<h2 class="about-us__title title">О нас</h2>
 					<div class="about-us__text">IT-SPK - сервисная компания по обслуживанию АйТи инфраструктуры для бизнеса. Мы небольшая команда фанатов своего дела c многолетним опытом работы. Решаем любые ИТ задачи в Киеве: проектирование, монтаж и поддержка ИТ инфраструктуры, настройка и поддержка серверов, виртуализация, обслуживание компьютеров, поддержка пользователей.</div>
 				</div>
 			</section>
-			<section class="services">
+			<section id="services" class="services">
 				<div class="services__container">
 					<h2 class="services__title title">Услуги</h2>
 					<article class="services__card">
@@ -155,7 +155,7 @@
 								<p class="info__paragraf">За время работы мы подобрали оптимальные решения по соотношению цена-качество для организации офисной IT-инфраструктуры. Огромный опыт обслуживания объектов в Киеве от офиса на несколько рабочих мест до офисно-производственных комплексов на тысячи квадартных метров и более полутора сотен подключенных абонентов.</p>
 								<p class="info__paragraf">Абонентское обслуживание компьютеров в Киеве уже сейчас не оставляет шансов на выживание обычным сисадминам в штате компании, прежний подход дороже и неэффективный. С первого дня работы с нами вы получаете доступ ко всем нашим знаниям, опыту и ресурсам. </p>
 							</div>
-							<div class="info__btn buttom _icon-arrow">Отправить заявку</div>
+							<div data-popup="#popup" class="info__btn buttom _icon-arrow">Отправить заявку</div>
 						</div>
 
 						<div class="info__block block-info">
@@ -183,7 +183,7 @@
 					</div>
 				</div>
 			</section>
-			<section class="price">
+			<section id="price" class="price">
 				<div class="price__container">
 					<div class="price__block">
 						<div class="price__title title">Цены</div>
@@ -302,13 +302,13 @@
 								<input autocomplete="off" type="email" name="form[]" data-error="Ошибка" placeholder="E-mail" class="input">
 							</div>
 							<div class="form-footer__textarea">
-								<textarea class="form-footer__area" name="" id="" placeholder="Сообщение"></textarea>
+								<textarea class="form-footer__area" name="" placeholder="Сообщение"></textarea>
 							</div>
 							<div class="form-footer__checkbox checkbox">
 								<input id="c_1" data-error="Ошибка" class="checkbox__input" type="checkbox" value="1" name="form[]">
 								<label for="c_1" class="checkbox__label"><span class="checkbox__text">Даю согласие на обработку персональных данных</span></label>
 							</div>
-							<button data-popup="1" class="form-footer__btn buttom _icon-arrow">Отправить</button>
+							<button class="form-footer__btn buttom _icon-arrow">Отправить</button>
 						</form>
 					</div>
 				</div>
@@ -336,19 +336,38 @@
 			</div>
 		</footer>
 	</div>
-	<!-- 
-<div id="popup" aria-hidden="true" class="popup">
-	<div class="popup__wrapper">
-		<div class="popup__content">
-			<button data-close type="button" class="popup__close">Закрыть</button>
-			<div class="popup__text">
+
+	<div id="popup" aria-hidden="true" class="popup">
+		<div class="popup__wrapper">
+			<div class="popup__content">
+				<button data-close type="button" class="popup__close">Закрыть</button>
+				<div class="popup__text">
+					<form class="footer__form form-footer" action="#">
+						<div class="form-footer__item">
+							<input autocomplete="off" type="text" name="form[]" data-error="Ошибка" placeholder="Имя" class="input">
+						</div>
+						<div class="form-footer__item">
+							<input autocomplete="off" type="tel" name="form[]" data-error="Ошибка" placeholder="Номер телефона*" class="input">
+						</div>
+						<div class="form-footer__item">
+							<input autocomplete="off" type="email" name="form[]" data-error="Ошибка" placeholder="E-mail" class="input">
+						</div>
+						<div class="form-footer__textarea">
+							<textarea class="form-footer__area" name="" placeholder="Сообщение"></textarea>
+						</div>
+						<div class="form-footer__checkbox checkbox">
+							<input id="c_1" data-error="Ошибка" class="checkbox__input" type="checkbox" value="1" name="form[]">
+							<label for="c_1" class="checkbox__label"><span class="checkbox__text">Даю согласие на обработку персональных данных</span></label>
+						</div>
+						<button class="form-footer__btn buttom _icon-arrow">Отправить</button>
+					</form>
+				</div>
 			</div>
 		</div>
 	</div>
-</div>
- -->
 
-	<script src="js/app.min.js?_v=20220106103738"></script>
+
+	<script src="js/app.min.js?_v=20220223183621"></script>
 </body>
 
 </html>

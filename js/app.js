@@ -10,15 +10,15 @@
       (this.nodes = document.querySelectorAll("[data-da]"));
     for (let t = 0; t < this.nodes.length; t++) {
       const e = this.nodes[t],
-        s = e.dataset.da.trim().split(","),
-        i = {};
-      (i.element = e),
-        (i.parent = e.parentNode),
-        (i.destination = document.querySelector(s[0].trim())),
-        (i.breakpoint = s[1] ? s[1].trim() : "767"),
-        (i.place = s[2] ? s[2].trim() : "last"),
-        (i.index = this.indexInParent(i.parent, i.element)),
-        this.оbjects.push(i);
+        o = e.dataset.da.trim().split(","),
+        s = {};
+      (s.element = e),
+        (s.parent = e.parentNode),
+        (s.destination = document.querySelector(o[0].trim())),
+        (s.breakpoint = o[1] ? o[1].trim() : "767"),
+        (s.place = o[2] ? o[2].trim() : "last"),
+        (s.index = this.indexInParent(s.parent, s.element)),
+        this.оbjects.push(s);
     }
     this.arraySort(this.оbjects),
       (this.mediaQueries = Array.prototype.map.call(
@@ -32,55 +32,55 @@
       )),
       (this.mediaQueries = Array.prototype.filter.call(
         this.mediaQueries,
-        function (t, e, s) {
-          return Array.prototype.indexOf.call(s, t) === e;
+        function (t, e, o) {
+          return Array.prototype.indexOf.call(o, t) === e;
         }
       ));
     for (let e = 0; e < this.mediaQueries.length; e++) {
-      const s = this.mediaQueries[e],
-        i = String.prototype.split.call(s, ","),
-        o = window.matchMedia(i[0]),
-        n = i[1],
+      const o = this.mediaQueries[e],
+        s = String.prototype.split.call(o, ","),
+        i = window.matchMedia(s[0]),
+        n = s[1],
         a = Array.prototype.filter.call(this.оbjects, function (t) {
           return t.breakpoint === n;
         });
-      o.addListener(function () {
-        t.mediaHandler(o, a);
+      i.addListener(function () {
+        t.mediaHandler(i, a);
       }),
-        this.mediaHandler(o, a);
+        this.mediaHandler(i, a);
     }
   }),
     (t.prototype.mediaHandler = function (t, e) {
       if (t.matches)
         for (let t = 0; t < e.length; t++) {
-          const s = e[t];
-          (s.index = this.indexInParent(s.parent, s.element)),
-            this.moveTo(s.place, s.element, s.destination);
+          const o = e[t];
+          (o.index = this.indexInParent(o.parent, o.element)),
+            this.moveTo(o.place, o.element, o.destination);
         }
       else
         for (let t = e.length - 1; t >= 0; t--) {
-          const s = e[t];
-          s.element.classList.contains(this.daClassname) &&
-            this.moveBack(s.parent, s.element, s.index);
+          const o = e[t];
+          o.element.classList.contains(this.daClassname) &&
+            this.moveBack(o.parent, o.element, o.index);
         }
     }),
-    (t.prototype.moveTo = function (t, e, s) {
+    (t.prototype.moveTo = function (t, e, o) {
       e.classList.add(this.daClassname),
-        "last" === t || t >= s.children.length
-          ? s.insertAdjacentElement("beforeend", e)
+        "last" === t || t >= o.children.length
+          ? o.insertAdjacentElement("beforeend", e)
           : "first" !== t
-          ? s.children[t].insertAdjacentElement("beforebegin", e)
-          : s.insertAdjacentElement("afterbegin", e);
+          ? o.children[t].insertAdjacentElement("beforebegin", e)
+          : o.insertAdjacentElement("afterbegin", e);
     }),
-    (t.prototype.moveBack = function (t, e, s) {
+    (t.prototype.moveBack = function (t, e, o) {
       e.classList.remove(this.daClassname),
-        void 0 !== t.children[s]
-          ? t.children[s].insertAdjacentElement("beforebegin", e)
+        void 0 !== t.children[o]
+          ? t.children[o].insertAdjacentElement("beforebegin", e)
           : t.insertAdjacentElement("beforeend", e);
     }),
     (t.prototype.indexInParent = function (t, e) {
-      const s = Array.prototype.slice.call(t.children);
-      return Array.prototype.indexOf.call(s, e);
+      const o = Array.prototype.slice.call(t.children);
+      return Array.prototype.indexOf.call(o, e);
     }),
     (t.prototype.arraySort = function (t) {
       "min" === this.type
@@ -263,8 +263,8 @@
             )}?rel=0&showinfo=0&autoplay=1`,
             e = document.createElement("iframe");
           e.setAttribute("allowfullscreen", "");
-          const s = this.options.setAutoplayYoutube ? "autoplay;" : "";
-          e.setAttribute("allow", `${s}; encrypted-media`),
+          const o = this.options.setAutoplayYoutube ? "autoplay;" : "";
+          e.setAttribute("allow", `${o}; encrypted-media`),
             e.setAttribute("src", t),
             this.targetOpen.element.querySelector(
               `[${this.options.youtubePlaceAttribute}]`
@@ -280,7 +280,7 @@
             this.options.classes.popupActive
           ),
           document.body.classList.add(this.options.classes.bodyActive),
-          this._reopen ? (this._reopen = !1) : i(),
+          this._reopen ? (this._reopen = !1) : s(),
           this.targetOpen.element.setAttribute("aria-hidden", "false"),
           (this.previousOpen.selector = this.targetOpen.selector),
           (this.previousOpen.element = this.targetOpen.element),
@@ -304,7 +304,7 @@
         "" !== t.trim() &&
         (this.previousOpen.selector = t),
         this.isOpen &&
-          s &&
+          o &&
           (this.options.on.beforeClose(this),
           this.targetOpen.element.hasAttribute(this.options.youtubeAttribute) &&
             this.targetOpen.element.querySelector(
@@ -319,7 +319,7 @@
           this.previousOpen.element.setAttribute("aria-hidden", "true"),
           this._reopen ||
             (document.body.classList.remove(this.options.classes.bodyActive),
-            i(),
+            s(),
             (this.isOpen = !1)),
           this._removeHash(),
           this._selectorOpen &&
@@ -357,10 +357,10 @@
     }
     _focusCatch(t) {
       const e = this.targetOpen.element.querySelectorAll(this._focusEl),
-        s = Array.prototype.slice.call(e),
-        i = s.indexOf(document.activeElement);
-      t.shiftKey && 0 === i && (s[s.length - 1].focus(), t.preventDefault()),
-        t.shiftKey || i !== s.length - 1 || (s[0].focus(), t.preventDefault());
+        o = Array.prototype.slice.call(e),
+        s = o.indexOf(document.activeElement);
+      t.shiftKey && 0 === s && (o[o.length - 1].focus(), t.preventDefault()),
+        t.shiftKey || s !== o.length - 1 || (o[0].focus(), t.preventDefault());
     }
     _focusTrap() {
       const t = this.previousOpen.element.querySelectorAll(this._focusEl);
@@ -369,41 +369,36 @@
         : t[0].focus();
     }
     popupLogging(t) {
-      this.options.logging &&
-        (function (t) {
-          setTimeout(() => {
-            window.FLS && console.log(t);
-          }, 0);
-        })(`[Попапос]: ${t}`);
+      this.options.logging && a(`[Попапос]: ${t}`);
     }
   }
-  let s = !0,
-    i = (t = 500) => {
-      document.documentElement.classList.contains("lock") ? o(t) : n(t);
+  let o = !0,
+    s = (t = 500) => {
+      document.documentElement.classList.contains("lock") ? i(t) : n(t);
     },
-    o = (t = 500) => {
+    i = (t = 500) => {
       let e = document.querySelector("body");
-      if (s) {
-        let i = document.querySelectorAll("[data-lp]");
+      if (o) {
+        let s = document.querySelectorAll("[data-lp]");
         setTimeout(() => {
-          for (let t = 0; t < i.length; t++) {
-            i[t].style.paddingRight = "0px";
+          for (let t = 0; t < s.length; t++) {
+            s[t].style.paddingRight = "0px";
           }
           (e.style.paddingRight = "0px"),
             document.documentElement.classList.remove("lock");
         }, t),
-          (s = !1),
+          (o = !1),
           setTimeout(function () {
-            s = !0;
+            o = !0;
           }, t);
       }
     },
     n = (t = 500) => {
       let e = document.querySelector("body");
-      if (s) {
-        let i = document.querySelectorAll("[data-lp]");
-        for (let t = 0; t < i.length; t++) {
-          i[t].style.paddingRight =
+      if (o) {
+        let s = document.querySelectorAll("[data-lp]");
+        for (let t = 0; t < s.length; t++) {
+          s[t].style.paddingRight =
             window.innerWidth -
             document.querySelector(".wrapper").offsetWidth +
             "px";
@@ -413,15 +408,47 @@
           document.querySelector(".wrapper").offsetWidth +
           "px"),
           document.documentElement.classList.add("lock"),
-          (s = !1),
+          (o = !1),
           setTimeout(function () {
-            s = !0;
+            o = !0;
           }, t);
       }
     };
-  let a = !1;
+  function a(t) {
+    setTimeout(() => {
+      window.FLS && console.log(t);
+    }, 0);
+  }
+  let r = (t, e = !1, o = 500, s = 0) => {
+    const n = document.querySelector(t);
+    if (n) {
+      let r = "",
+        l = 0;
+      e &&
+        ((r = "header.header"), (l = document.querySelector(r).offsetHeight));
+      let c = {
+        speedAsDuration: !0,
+        speed: o,
+        header: r,
+        offset: s,
+        easing: "easeOutQuad",
+      };
+      if (
+        (document.documentElement.classList.contains("menu-open") &&
+          (i(), document.documentElement.classList.remove("menu-open")),
+        "undefined" != typeof SmoothScroll)
+      )
+        new SmoothScroll().animateScroll(n, "", c);
+      else {
+        let t = n.getBoundingClientRect().top + scrollY;
+        window.scrollTo({ top: l ? t - l : t, behavior: "smooth" });
+      }
+      a(`[gotoBlock]: Юхуу...едем к ${t}`);
+    } else a(`[gotoBlock]: Ой ой..Такого блока нет на странице: ${t}`);
+  };
+  let l = !1;
   setTimeout(() => {
-    if (a) {
+    if (l) {
       let t = new Event("windowScroll");
       window.addEventListener("scroll", function (e) {
         document.dispatchEvent(t);
@@ -445,8 +472,36 @@
       let t = document.querySelector(".icon-menu");
       t &&
         t.addEventListener("click", function (t) {
-          s && (i(), document.documentElement.classList.toggle("menu-open"));
+          o && (s(), document.documentElement.classList.toggle("menu-open"));
         });
     })(),
-    new e({});
+    new e({}),
+    (function () {
+      function t(t) {
+        if ("click" === t.type) {
+          const e = t.target;
+          if (e.closest("[data-goto]")) {
+            const o = e.closest("[data-goto]"),
+              s = o.dataset.goto ? o.dataset.goto : "",
+              i = !!o.hasAttribute("data-goto-header"),
+              n = o.dataset.gotoSpeed ? o.dataset.gotoSpeed : "500";
+            r(s, i, n), t.preventDefault();
+          }
+        } else if ("watcherCallback" === t.type && t.detail) {
+          const e = t.detail.entry,
+            o = e.target;
+          if ("navigator" === o.dataset.watch) {
+            const t = o.id,
+              s =
+                (document.querySelector("[data-goto]._navigator-active"),
+                document.querySelector(`[data-goto="${t}"]`));
+            e.isIntersecting
+              ? s && s.classList.add("_navigator-active")
+              : s && s.classList.remove("_navigator-active");
+          }
+        }
+      }
+      document.addEventListener("click", t),
+        document.addEventListener("watcherCallback", t);
+    })();
 })();
