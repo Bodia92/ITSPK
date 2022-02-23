@@ -1,179 +1,529 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Верстка «ITSPK»</title>
+	</head>
+	<body>
+		<div class="rootpage">
+			<h1>Верстка «ITSPK»</h1>
+			<div class="rootpage__info">
+				Особенности проекта
+			</div>
+			<h2>Готовые страницы:</h2>
+			<ol class="rootpage__list">
+				<li><a target="_blank" href="home.html">Главная</a></li>
+			</ol>
+			<h2>Попапы:</h2>
+			<ol class="rootpage__list">
+				<li><a target="_blank" href="home.html#"></a></li>
+			</ol>
+			<div class="rootpage__tnx">
+				<h2>Спасибо за заказ!</h2>
+				<p>Буду рад (а) хорошему отзыву.</p>
+				<p>Обращайтесь еще!</p>
+			</div>
+			<div class="rootpage__contacts">
+				<h2>Мои контакты:</h2>
+				<p>Почта: <a href="mailto:email@gmail.com">email@gmail.com</a></p>
+				<p>Телефон: <a href="tel:8800800800">8 800 800 800</a></p>
+				<p>Соц. сеть: <a href="">ссылка на соц. сеть</a></p>
+			</div>
+		</div>
+	</body>
+	<style>
+		@charset "UTF-8";
+		@import url("https://fonts.googleapis.com/css?family=Montserrat:regular,700&display=swap");
+		* ,*::before, *::after {
+			padding: 0px;
+			margin: 0px;
+			border: 0px;
+			box-sizing: border-box;
+		}
+		html, body {
+			height: 100%;
+			margin: 0;
+			padding: 0;
+			min-width: 320px;
+			width: 100%;
+			color: #fff;
+			background-color: #5e5373;
+		}
+		body {
+			font-family: Montserrat;
+			font-size: 100%;
+			line-height: 1;
+			font-size: 1rem;
+		}
+		a {
+			text-decoration: underline;
+			color: #ebe691
+		}
+		a:visited {
+			text-decoration: underline;
+			color: #aaa768;
+		}
+			a:hover {
+			text-decoration: none;
+		}
+		ul li {
+			list-style: none;
+		}
+		img {
+			vertical-align: top;
+		}
+		.wrapper {
+			width: 100%;
+			min-height: 100%;
+			overflow: hidden;
+		}
+		.rootpage{
+			padding: 30px;
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+		}
+		@media (max-width: 767px) {
+			.rootpage{
+				padding:30px 15px;
+			}
+		}
+		h1 {
+			color: #ebe691;
+			font-size: 2.5rem;
+			margin: 0px 0px 1.25rem 0px;
+		}
+		@media (max-width: 767px) {
+			h1 {
+				font-size: 1.85rem;
+				margin: 0px 0px 1.25rem 0px;
+			}
+		}
+		h2 {
+			color: #ebe691;
+			font-size: 1.25rem;
+			margin: 0px 0px 1rem 0px;
+		}
+		@media (max-width: 767px) {
+			 h2 {
+				font-size: 1.125rem;
+				margin: 0px 0px 1rem 0px;
+			}
+		}
+		.rootpage__info{
+			line-height: 140%;
+			margin: 0px 0px 1.5rem 0px;
+		}
+
+		.rootpage__list{
+			margin: 0px 0px 2.25rem 1.25rem;
+		}
+		.rootpage__list li:not(:last-child){
+			margin: 0px 0px 15px 0px;
+		}
+		.rootpage__contacts,
+		.rootpage__tnx{
+			border-radius: 200px;
+			padding: 20px 65px;
+			line-height: 140%;
+		}
+		@media (max-width: 767px){
+		.rootpage__contacts,
+		.rootpage__tnx{
+			border-radius:40px;
+			padding: 20px;
+		}
+		}
+		.rootpage__contacts{
+			background: #32b5a4;
+
+		}
+		.rootpage__contacts a{
+			color: #ebe691;
+		}
+		.rootpage__tnx{
+			background: #c22d63;
+			margin: 0px 0px 1rem 0px;
+		}
+	</style>
+</html> -->
+
+<!DOCTYPE html>
+<html lang="ru">
 
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Верстка «ITSPK»</title>
+</head>
+
+<head>
+	<title>IT-SPK</title>
+	<meta charset="UTF-8">
+	<meta name="format-detection" content="telephone=no">
+	<!-- <style>body{opacity: 0;}</style> -->
+	<link rel="stylesheet" href="css/style.min.css?_v=20220223184628">
+	<link rel="shortcut icon" href="favicon.ico">
+	<!-- <meta name="robots" content="noindex, nofollow"> -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 
 <body>
-	<div class="rootpage">
-		<h1>Верстка «ITSPK»</h1>
-		<div class="rootpage__info">
-			Особенности проекта
-		</div>
-		<h2>Готовые страницы:</h2>
-		<ol class="rootpage__list">
-			<li><a target="_blank" href="home.html">Главная</a></li>
-		</ol>
-		<h2>Попапы:</h2>
-		<ol class="rootpage__list">
-			<li><a target="_blank" href="home.html#"></a></li>
-		</ol>
-		<div class="rootpage__tnx">
-			<h2>Спасибо за заказ!</h2>
-			<p>Буду рад (а) хорошему отзыву.</p>
-			<p>Обращайтесь еще!</p>
-		</div>
-		<div class="rootpage__contacts">
-			<h2>Мои контакты:</h2>
-			<p>Почта: <a href="mailto:email@gmail.com">email@gmail.com</a></p>
-			<p>Телефон: <a href="tel:8800800800">8 800 800 800</a></p>
-			<p>Соц. сеть: <a href="">ссылка на соц. сеть</a></p>
+	<div class="wrapper">
+		<header class="header">
+			<div class="header__container">
+
+				<div class="header__top">
+					<div class="header__logo">
+						<picture><source srcset="img/logo-header.webp"type="image/webp"><img src="img/logo-header.png" alt="logo"></picture>
+					</div>
+					<div class="header__text"><a class="header__link" href="">ua</a></div>
+				</div>
+				<div class="header__menu menu">
+					<nav class="menu__body">
+						<ul class="menu__list">
+							<li data-goto="#about" class="menu__item"><a href="" class="menu__link">О нас</a></li>
+							<li data-goto="#services" class="menu__item"><a href="" class="menu__link">Услуги</a></li>
+							<li data-goto="#price" class="menu__item"><a href="" class="menu__link">Цены</a></li>
+						</ul>
+					</nav>
+				</div>
+				<button type="button" class="header__icon icon-menu"><span></span></button>
+				<div class="header__contacts contacts-header">
+					<div class="contacts-header__items">
+						<div class="contacts-header__title">lifecell</div>
+						<a class="contacts-header__link" href="tel:380935412092">+380 93 541 20 92</a>
+					</div>
+					<div class="contacts-header__items">
+						<div class="contacts-header__title">Vodafone</div>
+						<a class="contacts-header__link" href="tel:3809931129792">+380 99 311 29 79</a>
+					</div>
+				</div>
+			</div>
+
+
+			<div class="header__burger burger">
+				<div class="burger__logo">
+					<picture><source srcset="img/logo-burger.webp"type="image/webp"><img src="img/logo-burger.png" alt=""></picture>
+				</div>
+				<div class="burger__contacts">
+					<div class="burger__block">
+						<a class="burger__phone" href="tel:380935412092">+380 93 541 20 92</a>
+						<div class="burger__title">lifecell</div>
+					</div>
+					<div class="burger__block">
+						<a class="burger__phone" href="tel:3809931129792">+380 99 311 29 79</a>
+						<div class="burger__title">Vodafone</div>
+					</div>
+				</div>
+				<div class="burger__menu">
+					<nav class="burger__body">
+						<ul class="burger__list">
+							<li class="burger__item"><a href="" class="burger__link">О нас</a></li>
+							<li class="burger__item"><a href="" class="burger__link">Услуги</a></li>
+							<li class="burger__item"><a href="" class="burger__link">Цены</a></li>
+						</ul>
+					</nav>
+				</div>
+				<div class="burger__language">
+					<a class="burger__lan burger__lan_active" href="">ua</a>
+					<a class="burger__lan" href="">ru</a>
+				</div>
+				<div class="burger__btn">
+					<button type="button" class="burger__buttom buttom _icon-arrow">Отправить заявку</button>
+				</div>
+			</div>
+		</header>
+		<main class="page">
+			<div class="page__main main">
+				<div class="main__container">
+
+					<section class="main__block">
+						<div class="main__body body-main">
+							<h1 class="body-main__title">IT-Аутсорсинг компаниям в Киеве</h1>
+							<div class="body-main__text">Обслуживание компьютеров в Киеве</div>
+							<div class="body-main__price">От <span>315грн</span>/мес за 1 рабочее место</div>
+							<button data-popup="#popup" type="button" class="body-main__buttom buttom _icon-arrow">Отправить заявку</button>
+						</div>
+						<div class="main__text">Мы знаем как сложно найти хорошую компанию по обслуживанию компьютеров в Киеве. Исправим это!</div>
+					</section>
+
+				</div>
+			</div>
+			<section id="about" class="about-us">
+				<div class="about-us__container">
+					<h2 class="about-us__title title">О нас</h2>
+					<div class="about-us__text">IT-SPK - сервисная компания по обслуживанию АйТи инфраструктуры для бизнеса. Мы небольшая команда фанатов своего дела c многолетним опытом работы. Решаем любые ИТ задачи в Киеве: проектирование, монтаж и поддержка ИТ инфраструктуры, настройка и поддержка серверов, виртуализация, обслуживание компьютеров, поддержка пользователей.</div>
+				</div>
+			</section>
+			<section id="services" class="services">
+				<div class="services__container">
+					<h2 class="services__title title">Услуги</h2>
+					<article class="services__card">
+						<div class="services__items">
+							<div class="services__item">
+								<div class="services__img">
+									<img src="img/services/item1.svg" alt="">
+								</div>
+								<div class="services__text">Обслуживание компьютеров</div>
+							</div>
+							<div class="services__item">
+								<div class="services__img">
+									<img src="img/services/item2.svg" alt="">
+								</div>
+								<div class="services__text">Обслуживание серверов</div>
+							</div>
+							<div class="services__item">
+								<div class="services__img">
+									<img src="img/services/item3.svg" alt="">
+								</div>
+								<div class="services__text">Виртуализация 1С</div>
+							</div>
+							<div class="services__item">
+								<div class="services__img">
+									<img src="img/services/item4.svg" alt="">
+								</div>
+								<div class="services__text">Аудит ИТ-инфраструктуры
+									и проектирование</div>
+							</div>
+							<div class="services__item">
+								<div class="services__img">
+									<img src="img/services/item5.svg" alt="">
+								</div>
+								<div class="services__text">Резервное копирование</div>
+							</div>
+							<div class="services__item">
+								<div class="services__img">
+									<img src="img/services/item6.svg" alt="">
+								</div>
+								<div class="services__text">Переезд ИТ инфраструктуры</div>
+							</div>
+						</div>
+					</article>
+				</div>
+			</section>
+			<section class="info">
+				<div class="info__container">
+					<div class="info__body">
+						<div class="info__card">
+							<h3 class="info__title">C IT-SPK ваш офис будет работать эффективно и безотказно</h3>
+							<div class="info__text">
+								<p class="info__paragraf">За время работы мы подобрали оптимальные решения по соотношению цена-качество для организации офисной IT-инфраструктуры. Огромный опыт обслуживания объектов в Киеве от офиса на несколько рабочих мест до офисно-производственных комплексов на тысячи квадартных метров и более полутора сотен подключенных абонентов.</p>
+								<p class="info__paragraf">Абонентское обслуживание компьютеров в Киеве уже сейчас не оставляет шансов на выживание обычным сисадминам в штате компании, прежний подход дороже и неэффективный. С первого дня работы с нами вы получаете доступ ко всем нашим знаниям, опыту и ресурсам. </p>
+							</div>
+							<div data-popup="#popup" class="info__btn buttom _icon-arrow">Отправить заявку</div>
+						</div>
+
+						<div class="info__block block-info">
+							<div class="block-info__target">
+								<div class="block-info__img"><img src="img/darts.svg" alt="darts"></div>
+								<div class="block-info__title">Цель IT-SPK</div>
+							</div>
+							<div class="block-info__text">Сократить расходы на ИТ + оптимизировать работу = увеличить вашу прибыль и отрыв от конкурентов</div>
+						</div>
+
+					</div>
+				</div>
+			</section>
+			<section class="connection">
+				<div class="connection__container">
+					<div class="connection__block">
+						<div class="connection__title">Подключить обслуживание компьютеров у нас очень просто</div>
+						<div class="connection__body">
+							<div class="connection__items">
+								<div class="connection__item"><span>1</span>Оставить заявку на сайте или просто позвонить нам</div>
+								<div class="connection__item"><span>2</span>Мы проведем бесплатный аудит и подготовим коммерческое предложение</div>
+								<div class="connection__item"><span>3</span>Заключаем договор и ваш офис работает безотказно</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section id="price" class="price">
+				<div class="price__container">
+					<div class="price__block">
+						<div class="price__title title">Цены</div>
+
+						<div class="price__body">
+							<div class="price__card card-price">
+								<div class="card-price__body">
+									<p class="card-price__text">У нас нет зарплаты или фиксированной суммы в месяц, все рассчеты базируются только на количестве компьютеров, которые мы берем на обслуживание и подключенных услугах. Платите только за что чем пользуетесь - <span>максимальная экономия и эффективность.</span></p>
+									<p class="card-price__text">Оставьте заявку на обслуживание компьютеров и мы подготовим предложение специально для вас</p>
+								</div>
+								<div class="card-price__btn">
+									<button type="button" class="card-price__downloaded _icon-download">Прайс it</button>
+									<button type="button" class="card-price__downloaded _icon-download">Прайс монтаж</button>
+								</div>
+							</div>
+
+							<div data-da=".card-price__body,992" class="price__tariff tariff-price">
+								<div class="tariff-price__items">
+									<div class="tariff-price__item">
+										<div class="tariff-price__sub-title">Тарифный план</div>
+										<div class="tariff-price__title">Легкий старт</div>
+										<div class="tariff-price__figure">350<span>грн/мес</span></div>
+										<div class="tariff-price__text">за 1 рабочее место</div>
+									</div>
+								</div>
+								<div class="tariff-price__items">
+									<div class="tariff-price__item">
+										<div class="tariff-price__sub-title">Тарифный план</div>
+										<div class="tariff-price__title">Бизнес</div>
+										<div class="tariff-price__figure">315<span>грн/мес</span></div>
+										<div class="tariff-price__text">от 15 рабочих мест</div>
+									</div>
+								</div>
+							</div>
+						</div>
+
+					</div>
+				</div>
+			</section>
+			<section class="customers">
+				<div class="customers__container">
+					<div class="customers__title title">Клиенты</div>
+					<div class="customers__body">
+						<article class="customers__items">
+							<div class="customers__item">
+								<picture><source srcset="img/customers/customers-item1.webp"type="image/webp"><img src="img/customers/customers-item1.png" alt=""></picture>
+							</div>
+							<div class="customers__item">
+								<picture><source srcset="img/customers/customers-item2.webp"type="image/webp"><img src="img/customers/customers-item2.png" alt=""></picture>
+							</div>
+							<div class="customers__item">
+								<picture><source srcset="img/customers/customers-item3.webp"type="image/webp"><img src="img/customers/customers-item3.png" alt=""></picture>
+							</div>
+							<div class="customers__item">
+								<picture><source srcset="img/customers/customers-item4.webp"type="image/webp"><img src="img/customers/customers-item4.png" alt=""></picture>
+							</div>
+							<div class="customers__item">
+								<picture><source srcset="img/customers/customers-item5.webp"type="image/webp"><img src="img/customers/customers-item5.png" alt=""></picture>
+							</div>
+						</article>
+					</div>
+				</div>
+			</section>
+			<section class="organization">
+				<div class="organization__container">
+					<div class="organization__title">Организация IT-инфраструктуры в Киеве</div>
+					<div class="organization__body">
+						<div class="organization__text">
+							<p class="organization__paragraff">
+								Мы имеем большой опыт организации работы IT отделов разных компаний из города Киев и на основе этого создали универсальный протокол работы, который гарантирует стабильно высокое качество предоставления услуг.
+							</p>
+							<p class="organization__paragraff">
+								Всегда на старте проводим аудит существующих апаратных и программных решений. Берем во внимание как проложены сети, установленное серверное и коммутационное оборудование, к каким провайдерам и на каких условиях подключено. Анализ установленных компьютеров и оборудования, завязанных в сеть компании. По результатам этого этапа работы мы даем комплексный отчет с перечнем найденных критических и потенциально проблемных мест в ИТ-инфраструктуре компании, с вариантами их устранения.
+							</p>
+							<p class="organization__paragraff">
+								В случае если идет проектирование IT-инфраструктуры с нуля, мы учтем все пожелания и сразу сделаем все необходимое для бесперебойной работы компьютерной сети компании.
+							</p>
+							<p class="organization__paragraff">
+								Спланируем и организуем переезд всех IT-систем офиса на новую локацию или удаленную работу сотрудников при необходимости.
+							</p>
+						</div>
+						<div class="organization__block">
+							<div class="organization__subtitle">Услуги обслуживания компьютеров и серверов в Киеве это не только установить Windows и кинуть провод, это большой и сложный комплекс услуг:</div>
+							<ul class="organization__lists">
+								<li class="organization__list">- Установка, настройка и сопровождение ПО;</li>
+								<li class="organization__list">- Администрирование доменных, почтовых, файловых и хостинг серверов;</li>
+								<li class="organization__list">- Обеспечение защиты данных;</li>
+								<li class="organization__list">- Восстановление потерянных данных;</li>
+								<li class="organization__list">- Внедрение решений по защите конфиденциальной информации;</li>
+								<li class="organization__list">- Безопасный удаленный доступ к информации;</li>
+								<li class="organization__list">- Обслуживание бухгалтерских программ 1С Предприятие, M.E.Doc и других;</li>
+								<li class="organization__list">- Внедрение и сопровождение серверов IP телефонии;</li>
+								<li class="organization__list">- Монтаж и обслуживание сетей (СКС);</li>
+								<li class="organization__list">- Ремонт и обслуживание компьютеров, оргтехники.</li>
+								<li class="organization__list">- Оперативная техническая поддержка и консультация сотрудников</li>
+								<li class="organization__list">- Ведение первичной документации, сметы, логистика, снабжение ИТ-отдел</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</section>
+		</main>
+		<footer class="footer">
+			<div class="footer__block">
+				<div class="footer__container">
+					<div class="footer__top">
+						<div class="footer__title">Оставьте заявку на обслуживание компьютеров и мы свяжемся с вами</div>
+						<form class="footer__form form-footer" action="#">
+							<div class="form-footer__item">
+								<input autocomplete="off" type="text" name="form[]" data-error="Ошибка" placeholder="Имя" class="input">
+							</div>
+							<div class="form-footer__item">
+								<input autocomplete="off" type="tel" name="form[]" data-error="Ошибка" placeholder="Номер телефона*" class="input">
+							</div>
+							<div class="form-footer__item">
+								<input autocomplete="off" type="email" name="form[]" data-error="Ошибка" placeholder="E-mail" class="input">
+							</div>
+							<div class="form-footer__textarea">
+								<textarea class="form-footer__area" name="" placeholder="Сообщение"></textarea>
+							</div>
+							<div class="form-footer__checkbox checkbox">
+								<input id="c_1" data-error="Ошибка" class="checkbox__input" type="checkbox" value="1" name="form[]">
+								<label for="c_1" class="checkbox__label"><span class="checkbox__text">Даю согласие на обработку персональных данных</span></label>
+							</div>
+							<button class="form-footer__btn buttom _icon-arrow">Отправить</button>
+						</form>
+					</div>
+				</div>
+			</div>
+			<div class="footer__bottom bottom-footer">
+				<div class="bottom-footer__container">
+					<div class="bottom-footer__contacts">
+						<a class="bottom-footer__email" href="email:info@it-spk.com">info@it-spk.com</a>
+						<div class="bottom-footer__items">
+							<div class="bottom-footer__item">
+								<a class="bottom-footer__link" href="tel:380935412092">+380 93 541 20 92</a>
+								<div class="bottom-footer__title">lifecell</div>
+							</div>
+							<div class="bottom-footer__item">
+								<a class="bottom-footer__link" href="tel:380993112979">+380 99 311 29 79</a>
+								<div class="bottom-footer__title">Vodafone</div>
+							</div>
+						</div>
+					</div>
+					<div class="bottom-footer__info">
+						<div class="bottom-footer__text">Обслуживание компьютеров и монтаж сетей в Киеве</div>
+						<div class="bottom-footer__year">IT-SPK © 2021</div>
+					</div>
+				</div>
+			</div>
+		</footer>
+	</div>
+
+	<div id="popup" aria-hidden="true" class="popup">
+		<div class="popup__wrapper">
+			<div class="popup__content">
+				<button data-close type="button" class="popup__close">Закрыть</button>
+				<div class="popup__text">
+					<form class="footer__form form-footer" action="#">
+						<div class="form-footer__item">
+							<input autocomplete="off" type="text" name="form[]" data-error="Ошибка" placeholder="Имя" class="input">
+						</div>
+						<div class="form-footer__item">
+							<input autocomplete="off" type="tel" name="form[]" data-error="Ошибка" placeholder="Номер телефона*" class="input">
+						</div>
+						<div class="form-footer__item">
+							<input autocomplete="off" type="email" name="form[]" data-error="Ошибка" placeholder="E-mail" class="input">
+						</div>
+						<div class="form-footer__textarea">
+							<textarea class="form-footer__area" name="" placeholder="Сообщение"></textarea>
+						</div>
+						<div class="form-footer__checkbox checkbox">
+							<input id="c_1" data-error="Ошибка" class="checkbox__input" type="checkbox" value="1" name="form[]">
+							<label for="c_1" class="checkbox__label"><span class="checkbox__text">Даю согласие на обработку персональных данных</span></label>
+						</div>
+						<button class="form-footer__btn buttom _icon-arrow">Отправить</button>
+					</form>
+				</div>
+			</div>
 		</div>
 	</div>
+
+
+	<script src="js/app.min.js?_v=20220223184628"></script>
 </body>
-<style>
-	@charset "UTF-8";
-	@import url("https://fonts.googleapis.com/css?family=Montserrat:regular,700&display=swap");
-
-	*,
-	*::before,
-	*::after {
-		padding: 0px;
-		margin: 0px;
-		border: 0px;
-		box-sizing: border-box;
-	}
-
-	html,
-	body {
-		height: 100%;
-		margin: 0;
-		padding: 0;
-		min-width: 320px;
-		width: 100%;
-		color: #fff;
-		background-color: #5e5373;
-	}
-
-	body {
-		font-family: Montserrat;
-		font-size: 100%;
-		line-height: 1;
-		font-size: 1rem;
-	}
-
-	a {
-		text-decoration: underline;
-		color: #ebe691
-	}
-
-	a:visited {
-		text-decoration: underline;
-		color: #aaa768;
-	}
-
-	a:hover {
-		text-decoration: none;
-	}
-
-	ul li {
-		list-style: none;
-	}
-
-	img {
-		vertical-align: top;
-	}
-
-	.wrapper {
-		width: 100%;
-		min-height: 100%;
-		overflow: hidden;
-	}
-
-	.rootpage {
-		padding: 30px;
-		display: flex;
-		flex-direction: column;
-		align-items: flex-start;
-	}
-
-	@media (max-width: 767px) {
-		.rootpage {
-			padding: 30px 15px;
-		}
-	}
-
-	h1 {
-		color: #ebe691;
-		font-size: 2.5rem;
-		margin: 0px 0px 1.25rem 0px;
-	}
-
-	@media (max-width: 767px) {
-		h1 {
-			font-size: 1.85rem;
-			margin: 0px 0px 1.25rem 0px;
-		}
-	}
-
-	h2 {
-		color: #ebe691;
-		font-size: 1.25rem;
-		margin: 0px 0px 1rem 0px;
-	}
-
-	@media (max-width: 767px) {
-		h2 {
-			font-size: 1.125rem;
-			margin: 0px 0px 1rem 0px;
-		}
-	}
-
-	.rootpage__info {
-		line-height: 140%;
-		margin: 0px 0px 1.5rem 0px;
-	}
-
-	.rootpage__list {
-		margin: 0px 0px 2.25rem 1.25rem;
-	}
-
-	.rootpage__list li:not(:last-child) {
-		margin: 0px 0px 15px 0px;
-	}
-
-	.rootpage__contacts,
-	.rootpage__tnx {
-		border-radius: 200px;
-		padding: 20px 65px;
-		line-height: 140%;
-	}
-
-	@media (max-width: 767px) {
-
-		.rootpage__contacts,
-		.rootpage__tnx {
-			border-radius: 40px;
-			padding: 20px;
-		}
-	}
-
-	.rootpage__contacts {
-		background: #32b5a4;
-
-	}
-
-	.rootpage__contacts a {
-		color: #ebe691;
-	}
-
-	.rootpage__tnx {
-		background: #c22d63;
-		margin: 0px 0px 1rem 0px;
-	}
-</style>
 
 </html>
